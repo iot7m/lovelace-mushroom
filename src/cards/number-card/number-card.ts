@@ -165,6 +165,9 @@ export class NumberCard
               .displayMode=${this._config.display_mode}
               style=${styleMap(sliderStyle)}
               @current-change=${this.onCurrentValueChange}
+              @pointerdown=${(e: PointerEvent) => console.log("[NUMBER-arufanov] pointerdown", e.buttons, e.pointerId)}
+              @pointerup=${(e: PointerEvent) => console.log("[NUMBER-arufanov] pointerup", e.buttons, e.pointerId)}
+              @pointercancel=${(e: PointerEvent) => console.log("[NUMBER-arufanov] pointercancel", e.buttons, e.pointerId)}
             ></mushroom-number-value-control>
           </div>
         </mushroom-card>

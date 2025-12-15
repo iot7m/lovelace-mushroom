@@ -63,7 +63,7 @@ export default [
   {
     input: "src/mushroom.ts",
     output: {
-      dir: "dist",
+      file: "dist/mushroom-dev.js",
       format: "es",
       inlineDynamicImports: true,
     },
