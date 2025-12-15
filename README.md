@@ -195,6 +195,3 @@ The design is inspired by [7ahang’s work][7ahang] on Behance and [Ui Lovelace 
 [7ahang]: https://www.behance.net/gallery/88433905/Redesign-Smart-Home
 [release-url]: https://github.com/piitaya/lovelace-mushroom/releases
 [weblate-url]: https://hosted.weblate.org/engage/mushroom/
-
-
-arufanov
