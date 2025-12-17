@@ -4,10 +4,12 @@ cards:
   - type: grid
     title: Home assistant
     cards:
-      - type: custom:mushroom-number-card
-        entity: input_number.comfort
-      - type: custom:mushroom-number-card
-        entity: input_number.eco
+      - type: entities
+        entities:
+          - entity: input_number.comfort
+            name: Radiator
+          - entity: input_number.eco
+            name: Radiator
     columns: 2
     square: false
   - type: grid
