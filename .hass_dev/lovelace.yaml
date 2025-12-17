@@ -6,9 +6,3 @@
       icon: mdi:mushroom
       show_in_sidebar: true
       filename: lovelace-mushroom-showcase.yaml
-    lovelace-mushroom-number:
-      mode: yaml
-      title: Number
-      icon: mdi:mushroom
-      show_in_sidebar: true
-      filename: lovelace-mushroom-number.yaml

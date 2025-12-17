@@ -21,10 +21,6 @@ export class NumberValueControl extends LitElement {
 
   @property({ attribute: false }) public displayMode?: "slider" | "buttons";
 
-  private _dbgLastLogTs = 0;
-  private _dbgLastHassRef?: any;
-  private _dbgLastEntityRef?: any;
-
   protected willUpdate(changedProps: PropertyValues): void {
     const changes = Array.from(changedProps.entries()).map(
       ([key, oldValue]) => ({
