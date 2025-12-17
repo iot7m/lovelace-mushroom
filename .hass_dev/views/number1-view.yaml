@@ -1,23 +1,13 @@
 title: Number
 icon: mdi:numeric
 cards:
-  - type: grid
-    title: Home assistant
-    cards:
-      - type: entities
-        entities:
-          - entity: input_number.comfort
-            name: Radiator
-          - entity: input_number.eco
-            name: Radiator
-    columns: 2
-    square: false
-  - type: grid
-    title: Mashroom
-    cards:
-      - type: custom:mushroom-number-card
-        entity: input_number.comfort
-      - type: custom:mushroom-number-card
-        entity: input_number.eco
-    columns: 2
-    square: false
+  - type: entities
+    entities:
+      - entity: input_number.comfort
+        name: Radiator
+      - entity: input_number.eco
+        name: Radiator
+  - type: custom:mushroom-number-card
+    entity: input_number.comfort
+  - type: custom:mushroom-number-card
+    entity: input_number.eco
