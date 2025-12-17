@@ -41,6 +41,7 @@ export class NumberValueControl extends LitElement {
       entityState: this.entity?.state,
       t: performance.now().toFixed(1),
     });
+
   }
 
   protected updated(changedProps: PropertyValues): void {
