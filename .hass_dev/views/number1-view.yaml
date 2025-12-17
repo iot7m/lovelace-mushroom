@@ -1,0 +1,21 @@
+title: Number
+icon: mdi:numeric
+cards:
+  - type: grid
+    title: Home assistant
+    cards:
+      - type: custom:mushroom-number-card
+        entity: input_number.comfort
+      - type: custom:mushroom-number-card
+        entity: input_number.eco
+    columns: 2
+    square: false
+  - type: grid
+    title: Mashroom
+    cards:
+      - type: custom:mushroom-number-card
+        entity: input_number.comfort
+      - type: custom:mushroom-number-card
+        entity: input_number.eco
+    columns: 2
+    square: false
