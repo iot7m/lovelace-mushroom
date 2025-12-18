@@ -21,35 +21,6 @@ export class NumberValueControl extends LitElement {
 
   @property({ attribute: false }) public displayMode?: "slider" | "buttons";
 
-  protected willUpdate(changedProps: PropertyValues): void {
-    const changes = Array.from(changedProps.entries()).map(
-      ([key, oldValue]) => ({
-        prop: String(key),
-        oldValue,
-        newValue: (this as any)[key],
-      })
-    );
-
-    // eslint-disable-next-line no-console
-    console.log("[NVC-arufanov] willUpdate", {
-      changes,
-      entityId: this.entity?.entity_id,
-      entityState: this.entity?.state,
-      t: performance.now().toFixed(1),
-    });
-
-  }
-
-  protected updated(changedProps: PropertyValues): void {
-    const keys = Array.from(changedProps.keys());
-    console.log("[NVC-arufanov] updated", {
-      changedProps: keys,
-      entityId: this.entity?.entity_id,
-      entityState: this.entity?.state,
-      t: performance.now().toFixed(1),
-    });
-  }
-
   onChange(e: CustomEvent<{ value: number }>): void {
     const value = e.detail.value;
     const domain = this.entity.entity_id.split(".")[0];
@@ -60,12 +31,6 @@ export class NumberValueControl extends LitElement {
   }
 
   onCurrentChange(e: CustomEvent<{ value?: number }>): void {
-    console.log("[NVC-arufanov] current-change", {
-      value: e.detail.value,
-      entityState: this.entity?.state,
-      t: performance.now().toFixed(1),
-    });
-
     const value = e.detail.value;
 
     this.dispatchEvent(
@@ -78,13 +43,6 @@ export class NumberValueControl extends LitElement {
   }
 
   protected render(): TemplateResult {
-    console.log("[NVC-arufanov] render", {
-      entityId: this.entity?.entity_id,
-      entityState: this.entity?.state,
-      displayMode: this.displayMode,
-      t: performance.now().toFixed(1),
-    });
-
     const value = Number(this.entity.state);
 
     const formatOptions =

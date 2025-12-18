@@ -79,9 +79,19 @@ export class NumberCard
 
   @state() private value?: number;
 
+  @state() private isDragging = false;
+
   private _handleAction(ev: ActionHandlerEvent) {
     handleAction(this, this.hass!, this._config!, ev.detail.action!);
   }
+
+  private _onPointerDown = () => {
+    this.isDragging = true;
+  };
+
+  private _onPointerUp = () => {
+    this.isDragging = false;
+  };
 
   private onCurrentValueChange(e: CustomEvent<{ value?: number }>): void {
     if (e.detail.value != null) {
@@ -97,6 +107,8 @@ export class NumberCard
   }
 
   updateValue() {
+    if (this.isDragging) return;
+
     this.value = undefined;
     const stateObj = this._stateObj;
 
@@ -158,7 +170,10 @@ export class NumberCard
             ${this.renderBadge(stateObj)}
             ${this.renderStateInfo(stateObj, appearance, name, stateDisplay)};
           </mushroom-state-item>
-          <div class="actions" ?rtl=${rtl}>
+          <div class="actions" ?rtl=${rtl}
+               @pointerdown=${this._onPointerDown}
+               @pointerup=${this._onPointerUp}
+               @pointercancel=${this._onPointerUp}>
             <mushroom-number-value-control
               .hass=${this.hass}
               .entity=${stateObj}
