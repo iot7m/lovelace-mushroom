@@ -11,8 +11,6 @@ import {
 import "../../../shared/slider";
 import "../../../shared/input-number";
 
-import { PropertyValues } from "lit";
-
 @customElement("mushroom-number-value-control")
 export class NumberValueControl extends LitElement {
   @property({ attribute: false }) public hass!: HomeAssistant;
