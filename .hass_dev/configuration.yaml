@@ -17,3 +17,24 @@ frontend:
   extra_module_url:
     - http://localhost:4000/mushroom.js
 #   development_repo: /workspaces/home-assistant-frontend
+
+
+input_number:
+  comfort:
+    name: "Comfort"
+    icon: mdi:heating-coil
+    min: 5
+    max: 45
+    step: 1
+    initial: 22
+    unit_of_measurement: "°C"
+    mode: slider
+  eco:
+    name: "Eco"
+    icon: mdi:heating-coil
+    min: 5
+    max: 45
+    step: 1
+    initial: 22
+    unit_of_measurement: "°C"
+    mode: slider

@@ -1,0 +1,12 @@
+- id: setup_random_comfort_every_second
+  alias: "Setup random value for comfort input number every second"
+  trigger:
+    - platform: time_pattern
+      seconds: "/1"
+  action:
+    - service: input_number.set_value
+      target:
+        entity_id: input_number.comfort
+      data:
+        value: >
+          {{ range(5, 46) | random }}

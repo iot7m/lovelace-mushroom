@@ -1,0 +1,15 @@
+title: Number
+icon: mdi:numeric
+cards:
+  - type: entities
+    entities:
+      - entity: input_number.comfort
+        name: Comfort(update by timer)
+      - entity: input_number.eco
+        name: Eco
+  - type: custom:mushroom-number-card
+    entity: input_number.comfort
+    name: Comfort(update by timer)
+  - type: custom:mushroom-number-card
+    entity: input_number.eco
+    name: Eco
