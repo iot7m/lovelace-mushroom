@@ -4,10 +4,12 @@ cards:
   - type: entities
     entities:
       - entity: input_number.comfort
-        name: Radiator
+        name: Comfort(update by timer)
       - entity: input_number.eco
-        name: Radiator
+        name: Eco
   - type: custom:mushroom-number-card
     entity: input_number.comfort
+    name: Comfort(update by timer)
   - type: custom:mushroom-number-card
     entity: input_number.eco
+    name: Eco
